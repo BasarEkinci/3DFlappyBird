@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 4640350967362662083}
   - component: {fileID: 9083773134047220718}
   - component: {fileID: 3932790404235062867}
-  m_Layer: 0
+  - component: {fileID: 3318538396491709631}
+  - component: {fileID: 123078961530131851}
+  m_Layer: 3
   m_Name: bird
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032733819249026694}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -107,9 +109,49 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 180816249664581335, guid: f56c830ad47abb14e9e4fa9615772175, type: 3}
+--- !u!54 &3318538396491709631
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032733819249026694}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 106
+  m_CollisionDetection: 0
+--- !u!114 &123078961530131851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032733819249026694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3093cbc790b3a9b4ca985186cc1e9dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 200
 --- !u!1 &3453652833311592675
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,9 +163,9 @@ GameObject:
   - component: {fileID: 6724878799586012485}
   - component: {fileID: 5766442992097085931}
   - component: {fileID: 3246368116181138364}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: sayapkanan
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,9 +247,9 @@ GameObject:
   - component: {fileID: 6127621101235670177}
   - component: {fileID: 6345580066351078008}
   - component: {fileID: 5911241306016659827}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mata
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -297,7 +339,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4177026964735753002, guid: f56c830ad47abb14e9e4fa9615772175, type: 3}
 --- !u!1 &8168100718311253246
@@ -311,9 +353,9 @@ GameObject:
   - component: {fileID: 8291387964135321896}
   - component: {fileID: 4655875028497518238}
   - component: {fileID: 5516501027344799251}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: sayapkiri
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,9 +437,9 @@ GameObject:
   - component: {fileID: 2360238621701332712}
   - component: {fileID: 4802654731096437615}
   - component: {fileID: 3697185815118379686}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: paruh
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,6 +528,6 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1648817510738878786, guid: f56c830ad47abb14e9e4fa9615772175, type: 3}
