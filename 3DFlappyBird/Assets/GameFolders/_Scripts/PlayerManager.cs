@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using DG.Tweening;
 
@@ -35,7 +34,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Point"))
         {
-            Debug.Log("Point +1");
+            GameManager.Instance.Score++;
         }
         else
         {
