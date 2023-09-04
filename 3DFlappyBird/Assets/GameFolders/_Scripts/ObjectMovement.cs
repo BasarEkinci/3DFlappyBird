@@ -12,7 +12,7 @@ public class ObjectMovement : MonoBehaviour
     
     private void Update()
     {
-        if (GameManager.Instance.IsGameOver) return;
+        if (GameManager.Instance.IsGameOver || !GameManager.Instance.IsGameStarted) return;
         
         transform.position -= new Vector3(0, 0, speed) * Time.deltaTime;
         if (transform.position.z <= lowerLimit)

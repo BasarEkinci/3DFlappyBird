@@ -24,6 +24,11 @@ public class PlayerManager : MonoBehaviour
         {
             Jump();
         }
+
+        if(transform.position.y >= 25f)
+            GameManager.Instance.GameOver();
+        
+        rb.useGravity = GameManager.Instance.IsGameStarted;
     }
     
     private void OnTriggerEnter(Collider other)
@@ -41,6 +46,7 @@ public class PlayerManager : MonoBehaviour
     private void Jump()
     {
         rb.velocity = Vector3.zero;
+        transform.DORotate(Vector3.left * 15, 0.1f).SetLoops(2, LoopType.Yoyo);
         rb.AddForce(Vector3.up * jumpForce);
     }
 }
