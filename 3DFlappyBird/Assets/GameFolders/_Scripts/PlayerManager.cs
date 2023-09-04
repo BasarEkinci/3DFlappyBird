@@ -34,7 +34,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Game Over");
+            GameManager.Instance.GameOver();
         }
     }
 

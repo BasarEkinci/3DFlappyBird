@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5409392189981710845}
-  - component: {fileID: 8038656687884212125}
+  - component: {fileID: 8129926587001609964}
   m_Layer: 0
   m_Name: Cloud4
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8038656687884212125
+--- !u!114 &8129926587001609964
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,9 +43,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2482370833784566396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 326688083079cf14782900d2376dcb4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 316bdef3f8982734d871ac3cff48f5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
+  upperLimit: 50
+  lowerLimit: -40
+  minY: 25
+  maxY: 35
 --- !u!1 &4370484527307447496
 GameObject:
   m_ObjectHideFlags: 0

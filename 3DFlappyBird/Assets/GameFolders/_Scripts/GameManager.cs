@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        
+        IsGameOver = true;
+        Camera.main.transform.DOShakePosition(0.2f);
     }
 }

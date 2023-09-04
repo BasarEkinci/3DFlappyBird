@@ -2,10 +2,23 @@ using UnityEngine;
 
 public class ObjectMovement : MonoBehaviour
 {
+    [SerializeField] private float speed;
+    [SerializeField] private float upperLimit;
+    [SerializeField] private float lowerLimit;
+    [SerializeField] private float minY;
+    [SerializeField] private float maxY;
+
+    private float yPos;
+    
     private void Update()
     {
-        transform.position += new Vector3(0, 0, -10) * Time.deltaTime;
-        if (transform.position.z <= -26.8f)
-            transform.position = new Vector3(transform.position.x, transform.position.y, 28.8f);
+        if (GameManager.Instance.IsGameOver) return;
+        
+        transform.position -= new Vector3(0, 0, speed) * Time.deltaTime;
+        if (transform.position.z <= lowerLimit)
+        {
+            yPos = Random.Range(minY, maxY);
+            transform.position = new Vector3(transform.position.x,yPos, upperLimit);
+        }
     }
 }
