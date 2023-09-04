@@ -1,14 +1,21 @@
 using System;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] float jumpForce;
+    [SerializeField] GameObject wings;
     private Rigidbody rb;
     
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void Start()
+    {
+        wings.transform.DORotate(Vector3.right * 20, 0.1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
     }
 
     private void Update()
@@ -18,10 +25,17 @@ public class PlayerManager : MonoBehaviour
             Jump();
         }
     }
-
-    private void OnCollisionEnter(Collision other)
+    
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.CompareTag("Point"))
+        {
+            Debug.Log("Point +1");
+        }
+        else
+        {
+            Debug.Log("Game Over");
+        }
     }
 
     private void Jump()

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4976502859839191511}
   - component: {fileID: 8012179030873546659}
   - component: {fileID: 4732218868788656692}
-  - component: {fileID: 5135185199320979561}
   m_Layer: 0
   m_Name: pipe1 (1)
   m_TagString: Pipe
@@ -100,39 +99,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.3093352, y: 20.24622, z: 2.3093348}
   m_Center: {x: -0.000000059604645, y: -5.0389576, z: 0.000000059604645}
---- !u!54 &5135185199320979561
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336581005255495792}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 114
-  m_CollisionDetection: 0
 --- !u!1 &4961043574073941597
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +138,7 @@ Transform:
   - {fileID: 8474030516487723789}
   - {fileID: 2684811223549847546}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4533633982638260003
 MonoBehaviour:
@@ -213,7 +185,6 @@ GameObject:
   - component: {fileID: 701259817681720119}
   - component: {fileID: 8946049040499802117}
   - component: {fileID: 5460922723237392982}
-  - component: {fileID: 2071919868413753208}
   m_Layer: 0
   m_Name: pipe1
   m_TagString: Pipe
@@ -301,36 +272,9 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.3093352, y: 20.24622, z: 2.3093348}
   m_Center: {x: -0.000000059604645, y: -5.0389576, z: 0.000000059604645}
---- !u!54 &2071919868413753208
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6195119388167370764}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 114
-  m_CollisionDetection: 0

@@ -1200,6 +1200,50 @@ Transform:
   m_Father: {fileID: 1435317717}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1186114260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1186114262}
+  - component: {fileID: 1186114261}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1186114261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186114260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0eecf3cad357549bb51fcabf54e86d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1186114262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186114260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1230983621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,6 +1702,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6799652104738256398, guid: b0509b2bd1f214a45a4ef7206374b634,
     type: 3}
   m_PrefabInstance: {fileID: 1772136341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1672924482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 179708063967927849, guid: 0e153960b799b4b41921c397f409970f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6158127685078245706}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1707695001 stripped
 Transform:
@@ -2332,6 +2382,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 123078961530131851, guid: 0e153960b799b4b41921c397f409970f,
+        type: 3}
+      propertyPath: wings
+      value: 
+      objectReference: {fileID: 1672924482}
     - target: {fileID: 1032733819249026694, guid: 0e153960b799b4b41921c397f409970f,
         type: 3}
       propertyPath: m_Name
