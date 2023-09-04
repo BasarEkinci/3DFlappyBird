@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Cloud : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] float speed;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        transform.position -= new Vector3(0, 0, speed)* Time.deltaTime;
+        if (transform.position.z <= -40f)
+        {
+            float yPos = Random.Range(20, 35);
+            transform.position = new Vector3(transform.position.x, yPos, 50f);
+        }
     }
 }
