@@ -1811,7 +1811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundEffects:
   - {fileID: 8300000, guid: 8afef6a4cc6248348ab38c68368af898, type: 3}
-  - {fileID: 8300000, guid: 0b9d049132a62064f9bd8ffb8be49ad5, type: 3}
+  - {fileID: 8300000, guid: 99eda30d06c0ed54e85c7d2f7f2d49ed, type: 3}
 --- !u!4 &1048848611
 Transform:
   m_ObjectHideFlags: 0
@@ -4192,6 +4192,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318538396491709631, guid: 0e153960b799b4b41921c397f409970f,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4934651050543879312, guid: 0e153960b799b4b41921c397f409970f,
         type: 3}

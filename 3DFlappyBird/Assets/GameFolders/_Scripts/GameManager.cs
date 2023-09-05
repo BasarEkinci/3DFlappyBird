@@ -57,13 +57,14 @@ public class GameManager : MonoBehaviour
     {
         IsGameOver = true;
         SoundManager.Instance.PlayOneShot(0);
+        playerCollider.enabled = false;
         gameCam.transform.DOShakePosition(cameraShakeDuration).SetLoops(1,LoopType.Yoyo);
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(0);
-        player.GetComponent<Collider>().isTrigger = true;
+        playerCollider.enabled = true;
         IsGameStarted = false;
         IsGameOver = false;
     }
