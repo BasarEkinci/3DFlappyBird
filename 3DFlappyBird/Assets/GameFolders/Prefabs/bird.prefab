@@ -161,7 +161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3093cbc790b3a9b4ca985186cc1e9dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 1000
+  jumpForce: 1400
+  wingsAngle: 15
+  wingsAnimationDuration: 0.1
   wings: {fileID: 179708063967927849}
 --- !u!136 &4048253431154709033
 CapsuleCollider:

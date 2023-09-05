@@ -4,8 +4,12 @@ using DG.Tweening;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] float jumpForce;
+    [SerializeField] float wingsAngle;
+    [SerializeField] float wingsAnimationDuration;
     [SerializeField] GameObject wings;
+    
     private Rigidbody rb;
+    
     
     private void Awake()
     {
@@ -19,33 +23,25 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Jump();
-        }
-
-        if(transform.position.y >= 25f)
-            GameManager.Instance.GameOver();
-        
+        Jump();
         rb.useGravity = GameManager.Instance.IsGameStarted;
     }
     
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Point"))
-        {
             GameManager.Instance.Score++;
-        }
-        else
-        {
+        else if(other.gameObject.CompareTag("Pipe"))
             GameManager.Instance.GameOver();
-        }
     }
 
     private void Jump()
     {
-        rb.velocity = Vector3.zero;
-        transform.DORotate(Vector3.left * 15, 0.1f).SetLoops(2, LoopType.Yoyo);
-        rb.AddForce(Vector3.up * jumpForce);
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.velocity = Vector3.zero;
+            transform.DORotate(Vector3.left * wingsAngle, wingsAnimationDuration).SetLoops(2, LoopType.Yoyo);
+            rb.AddForce(Vector3.up * jumpForce);
+        }
     }
 }
