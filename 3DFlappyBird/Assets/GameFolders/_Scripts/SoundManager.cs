@@ -1,16 +1,20 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static SoundManager Instance { get; private set; }
+    private AudioSource audioSource;
+    [SerializeField] List<AudioClip> soundEffects;
+
+    private void Awake()
     {
-        
+        Instance = this;
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayOneShot(int index)
     {
-        
+        audioSource.PlayOneShot(soundEffects[index]);
     }
 }
