@@ -1812,6 +1812,7 @@ MonoBehaviour:
   soundEffects:
   - {fileID: 8300000, guid: 8afef6a4cc6248348ab38c68368af898, type: 3}
   - {fileID: 8300000, guid: 99eda30d06c0ed54e85c7d2f7f2d49ed, type: 3}
+  - {fileID: 8300000, guid: 932e06f30f1baff49b33c2e790209cda, type: 3}
 --- !u!4 &1048848611
 Transform:
   m_ObjectHideFlags: 0

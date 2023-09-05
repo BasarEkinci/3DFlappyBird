@@ -3,9 +3,11 @@ using DG.Tweening;
 
 public class PlayerManager : MonoBehaviour
 {
-    [SerializeField] float jumpForce;
-    [SerializeField] float wingsAngle;
-    [SerializeField] float wingsAnimationDuration;
+    [SerializeField] float jumpForce; 
+    [SerializeField] float jumpRotateAngle;
+    [SerializeField] float jumpRotateDuration;
+    [SerializeField] float wingsRotateAngle;
+    [SerializeField] float wingsRotateDuration;
     [SerializeField] GameObject wings;
     
     private Rigidbody rb;
@@ -18,9 +20,9 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
-        wings.transform.DORotate(Vector3.right * 20, 0.1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
+        wings.transform.DORotate(Vector3.right * wingsRotateAngle, wingsRotateDuration).SetLoops(-1, LoopType.Yoyo)
+            .SetEase(Ease.Linear);
     }
-
     private void Update()
     {
         Jump();
@@ -30,7 +32,7 @@ public class PlayerManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Point"))
-            GameManager.Instance.Score++;
+            GameManager.Instance.IncreaseScore();
         else if(other.gameObject.CompareTag("Pipe"))
             GameManager.Instance.GameOver();
     }
@@ -40,7 +42,7 @@ public class PlayerManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = Vector3.zero;
-            transform.DORotate(Vector3.left * wingsAngle, wingsAnimationDuration).SetLoops(2, LoopType.Yoyo);
+            transform.DORotate(Vector3.left * jumpRotateAngle, jumpRotateDuration).SetLoops(2, LoopType.Yoyo);
             rb.AddForce(Vector3.up * jumpForce);
             SoundManager.Instance.PlayOneShot(1);
         }

@@ -61,6 +61,11 @@ public class GameManager : MonoBehaviour
         gameCam.transform.DOShakePosition(cameraShakeDuration).SetLoops(1,LoopType.Yoyo);
     }
 
+    public void IncreaseScore()
+    {
+        Score++;
+        SoundManager.Instance.PlayOneShot(2);
+    }
     public void RestartGame()
     {
         SceneManager.LoadScene(0);
