@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         IsGameOver = true;
+        SoundManager.Instance.PlayOneShot(0);
         gameCam.transform.DOShakePosition(cameraShakeDuration).SetLoops(1,LoopType.Yoyo);
     }
 

@@ -42,6 +42,7 @@ public class PlayerManager : MonoBehaviour
             rb.velocity = Vector3.zero;
             transform.DORotate(Vector3.left * wingsAngle, wingsAnimationDuration).SetLoops(2, LoopType.Yoyo);
             rb.AddForce(Vector3.up * jumpForce);
+            SoundManager.Instance.PlayOneShot(1);
         }
     }
 }
