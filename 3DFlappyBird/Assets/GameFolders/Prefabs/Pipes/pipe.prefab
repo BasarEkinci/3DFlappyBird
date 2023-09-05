@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  upperLimit: 33
+  upperLimit: 30
   lowerLimit: -15
   minY: 0
   maxY: 14
