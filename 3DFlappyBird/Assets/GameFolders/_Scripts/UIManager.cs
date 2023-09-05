@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private TMP_Text scoreTex2;
     [SerializeField] private TMP_Text highScoreText;
-    
+
     private void Start()
     {
         instructionText.transform.DOScale(new Vector3(0.8f,0.8f,0.8f), 0.8f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.OutQuad);
