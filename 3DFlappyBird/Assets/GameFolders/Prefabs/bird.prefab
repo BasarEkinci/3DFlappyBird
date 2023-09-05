@@ -184,8 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3093cbc790b3a9b4ca985186cc1e9dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 1400
-  jumpRotateAngle: 10
+  jumpForce: 1600
+  jumpRotateAngle: 15
   jumpRotateDuration: 0.1
   wingsRotateAngle: 25
   wingsRotateDuration: 0.1

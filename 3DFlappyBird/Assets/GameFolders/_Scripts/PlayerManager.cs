@@ -35,11 +35,12 @@ public class PlayerManager : MonoBehaviour
             GameManager.Instance.IncreaseScore();
         else if(other.gameObject.CompareTag("Pipe"))
             GameManager.Instance.GameOver();
+        
     }
 
     private void Jump()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && !GameManager.Instance.IsGameOver)
         {
             rb.velocity = Vector3.zero;
             transform.DORotate(Vector3.left * jumpRotateAngle, jumpRotateDuration).SetLoops(2, LoopType.Yoyo);

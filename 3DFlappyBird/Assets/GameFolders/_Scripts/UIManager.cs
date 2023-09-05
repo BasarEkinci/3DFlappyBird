@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        instructionText.transform.DOScale(new Vector3(0.8f,0.8f,0.8f), 0.8f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.OutQuad);
+        instructionText.transform.DOScale(new Vector3(1.8f,1.8f,1.8f), 0.8f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.OutQuad);
     }
 
     private void Update()
