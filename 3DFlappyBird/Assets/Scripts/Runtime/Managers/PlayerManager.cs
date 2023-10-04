@@ -36,22 +36,18 @@ namespace Runtime.Managers
             CoreGameSignals.Instance.OnPipePassed += OnPipePassed;
             CoreGameSignals.Instance.OnCrashPipe += OnCrashPipe;
         }
-
         private void OnCrashPipe()
         {
-            
+            CoreGameSignals.Instance.OnGameOver?.Invoke();
         }
-
         private void OnPipePassed()
         {
-            
+            gameData.Score++;
         }
-
         private void UnsubscribeEvents()
         {
             CoreGameSignals.Instance.OnPipePassed -= OnPipePassed;
             CoreGameSignals.Instance.OnCrashPipe -= OnCrashPipe;
         }
-
     }
 }

@@ -7,6 +7,6 @@ namespace Runtime.Data.UnityObjects
     [CreateAssetMenu(fileName = "CD_Game", menuName = "FlappyBird3D/CD_Game")]
     public class CD_Game : ScriptableObject
     {
-        [FormerlySerializedAs("gameData")] public GameData GameData;
+        public GameData GameData;
     }
 }

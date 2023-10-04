@@ -7,5 +7,7 @@ namespace Runtime.Data.ValueObjects
     {
         public float Score;
         public float HighScore;
+        public bool IsGameStarted;
+        public bool IsGameOver;
     }
 }
