@@ -1,5 +1,8 @@
-﻿namespace Runtime.Data.ValueObjects
+﻿using System;
+
+namespace Runtime.Data.ValueObjects
 {
+    [Serializable]
     public struct GameData
     {
         public float Score;
