@@ -33,8 +33,8 @@ namespace Runtime.Managers
         }
         private void SubscribeEvents()
         {
-            CoreGameSignals.Instance.OnPipePassed += OnPipePassed;
-            CoreGameSignals.Instance.OnCrashPipe += OnCrashPipe;
+            PlayerSignals.Instance.OnPipePassed += OnPipePassed;
+            PlayerSignals.Instance.OnCrashPipe += OnCrashPipe;
         }
         private void OnCrashPipe()
         {
@@ -46,8 +46,8 @@ namespace Runtime.Managers
         }
         private void UnsubscribeEvents()
         {
-            CoreGameSignals.Instance.OnPipePassed -= OnPipePassed;
-            CoreGameSignals.Instance.OnCrashPipe -= OnCrashPipe;
+            PlayerSignals.Instance.OnPipePassed -= OnPipePassed;
+            PlayerSignals.Instance.OnCrashPipe -= OnCrashPipe;
         }
     }
 }

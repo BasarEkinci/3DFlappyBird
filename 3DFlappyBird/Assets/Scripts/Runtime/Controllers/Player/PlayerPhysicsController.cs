@@ -1,4 +1,4 @@
-﻿using Runtime.Signals;
+﻿using System;
 using UnityEngine;
 
 namespace Runtime.Controllers.Player
@@ -7,17 +7,25 @@ namespace Runtime.Controllers.Player
     {
         private string pointAreaTag = "PointArea";
         private string pipeTag = "Pipe";
+
+        private void OnEnable()
+        {
+            
+        }
+
+        private void OnDisable()
+        {
+            
+        }
+
         private void OnCollisionEnter(Collision other)
         {
             if (other.gameObject.CompareTag(pointAreaTag))
             {
-                CoreGameSignals.Instance.OnPipePassed?.Invoke();
                 return;
             }
             if (other.gameObject.CompareTag(pipeTag))
             {
-                CoreGameSignals.Instance.OnCrashPipe?.Invoke();
-                CoreGameSignals.Instance.OnGameOver?.Invoke();  
                 return;
             }
         }

@@ -8,7 +8,5 @@ namespace Runtime.Signals
         public UnityAction OnRestartGame = delegate {  };
         public UnityAction OnGameOver = delegate {  };
         public UnityAction OnGameStart = delegate {  };
-        public UnityAction OnPipePassed = delegate {  };
-        public UnityAction OnCrashPipe = delegate {  };
     }
 }
