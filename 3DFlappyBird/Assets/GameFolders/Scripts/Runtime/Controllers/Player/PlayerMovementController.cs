@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
-
-public class PlayerController : MonoBehaviour
+using DG.Tweening;
+public class PlayerMovementController : MonoBehaviour
 {
     [SerializeField] private float jumpForce;
     
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
     }
+
     private void Update()
     {
         IsButtonPressed();
@@ -25,7 +27,9 @@ public class PlayerController : MonoBehaviour
         if (IsButtonPressed())
         {
             playerRb.velocity = Vector3.zero;
+            transform.DORotate(Vector3.left * 15, 0.1f).From().SetLoops(2, LoopType.Yoyo);
             playerRb.velocity += new Vector3(0, jumpForce, 0) * Time.deltaTime;
+            isButtonPressed = false;
         }
     }
     private bool IsButtonPressed()

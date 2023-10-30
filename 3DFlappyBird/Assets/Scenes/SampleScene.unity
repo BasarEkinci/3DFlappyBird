@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42344362, g: 0.47082424, b: 0.51312023, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -222,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &97604289
 Transform:
   m_ObjectHideFlags: 0
@@ -252,11 +252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316bdef3f8982734d871ac3cff48f5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  upperLimit: 14.8
-  lowerLimit: -14.66
-  minY: -10.75
-  maxY: -10.75
 --- !u!4 &99037249 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7661671003975890780, guid: 950ebad05e9fde64c8301dff2a1e3d5a,
@@ -386,11 +381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316bdef3f8982734d871ac3cff48f5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
-  upperLimit: 33.97
-  lowerLimit: -34.19
-  minY: -8.79
-  maxY: -8.79
 --- !u!1 &301309684
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &478095629
 Transform:
   m_ObjectHideFlags: 0
@@ -1700,7 +1690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1048848609
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1809,10 +1799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9678b083bad6ad543a9d89b4a1074fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffects:
-  - {fileID: 8300000, guid: 8afef6a4cc6248348ab38c68368af898, type: 3}
-  - {fileID: 8300000, guid: 99eda30d06c0ed54e85c7d2f7f2d49ed, type: 3}
-  - {fileID: 8300000, guid: 932e06f30f1baff49b33c2e790209cda, type: 3}
 --- !u!4 &1048848611
 Transform:
   m_ObjectHideFlags: 0
@@ -2023,7 +2009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1186114261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2036,7 +2022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0eecf3cad357549bb51fcabf54e86d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6567111851237738444}
 --- !u!4 &1186114262
 Transform:
   m_ObjectHideFlags: 0
@@ -2101,11 +2086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316bdef3f8982734d871ac3cff48f5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
-  upperLimit: 33.97
-  lowerLimit: -34.19
-  minY: -8.79
-  maxY: -8.79
 --- !u!1001 &1319380968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2336,7 +2316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1435317717
 Transform:
   m_ObjectHideFlags: 0
@@ -2533,7 +2513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1526236415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2546,13 +2526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfc182de9106a7a48b97fdbb356eff63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instructionText: {fileID: 789666597}
-  startText: {fileID: 1689282248}
-  socialsButton: {fileID: 1047588791}
-  gameOverPanel: {fileID: 301309684}
-  scoreText: {fileID: 2082768709}
-  scoreTex2: {fileID: 1804140036}
-  highScoreText: {fileID: 1661599977}
 --- !u!4 &1526236416
 Transform:
   m_ObjectHideFlags: 0
@@ -2686,11 +2659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316bdef3f8982734d871ac3cff48f5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  upperLimit: 55
-  lowerLimit: -40
-  minY: 35
-  maxY: 35
 --- !u!4 &1661288912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6799652104738256398, guid: b0509b2bd1f214a45a4ef7206374b634,
@@ -2987,7 +2955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1696797774
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3673,7 +3641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2078453948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4093,6 +4061,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1286167908745692849, guid: 2dc35e217e3131044a62fe50726690d3,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286167908745692849, guid: 2dc35e217e3131044a62fe50726690d3,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 96
+      objectReference: {fileID: 0}
     - target: {fileID: 1317601740105265303, guid: 2dc35e217e3131044a62fe50726690d3,
         type: 3}
       propertyPath: m_Name
@@ -4152,6 +4130,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479153386718515804, guid: 2dc35e217e3131044a62fe50726690d3,
+        type: 3}
+      propertyPath: jumpForce
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4321,12 +4304,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950ebad05e9fde64c8301dff2a1e3d5a, type: 3}
---- !u!1 &6567111851237738444 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3697877115809212303, guid: 2dc35e217e3131044a62fe50726690d3,
-    type: 3}
-  m_PrefabInstance: {fileID: 2386706141645031081}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &6576597461764684872
 MeshRenderer:
   m_ObjectHideFlags: 0
