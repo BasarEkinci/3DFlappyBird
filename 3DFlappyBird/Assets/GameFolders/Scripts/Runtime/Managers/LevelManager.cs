@@ -5,6 +5,7 @@ namespace GameFolders.Scripts.Runtime.Managers
 {
     public class LevelManager : MonoBehaviour
     {
+        [SerializeField] private GameObject level;
         private void OnEnable()
         {
             CoreGameSignals.Instance.OnGameRestart += OnGameRestart;
@@ -17,7 +18,7 @@ namespace GameFolders.Scripts.Runtime.Managers
 
         private void OnGameRestart()
         {
-            
+            Instantiate(level, Vector3.zero, transform.rotation);
         }
     }
 }

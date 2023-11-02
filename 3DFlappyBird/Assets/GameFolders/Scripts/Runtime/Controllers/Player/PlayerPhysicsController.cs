@@ -11,7 +11,6 @@ namespace GameFolders.Scripts.Runtime.Controllers.Player
             {
                 PlayerSignals.Instance.OnHitPipe?.Invoke();
                 CoreGameSignals.Instance.OnGameOver?.Invoke();
-                InputSignals.Instance.OnDisableInput?.Invoke();
             }
             if (other.CompareTag("Point"))
             {

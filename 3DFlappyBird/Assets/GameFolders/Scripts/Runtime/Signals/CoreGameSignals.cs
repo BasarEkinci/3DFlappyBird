@@ -6,5 +6,6 @@ namespace GameFolders.Scripts.Runtime.Signals
     {
         public UnityAction OnGameOver = delegate {  };
         public UnityAction OnGameRestart = delegate {  };
+        public UnityAction OnGameStart = delegate {  };
     }
 }

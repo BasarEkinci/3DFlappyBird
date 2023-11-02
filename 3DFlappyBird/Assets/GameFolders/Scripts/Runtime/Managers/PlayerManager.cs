@@ -30,18 +30,34 @@ namespace GameFolders.Scripts.Runtime.Managers
         private void OnEnable()
         {
             InputSignals.Instance.OnButtonPressed += OnButtonPressed;
-            InputSignals.Instance.OnDisableInput += OnDisableInput;
+            PlayerSignals.Instance.OnHitPipe += OnHitPipe;
+            CoreGameSignals.Instance.OnGameStart += OnGameStart;
+            CoreGameSignals.Instance.OnGameRestart += OnGameRestart;
         }
 
         private void OnDisable()
         {
             InputSignals.Instance.OnButtonPressed -= OnButtonPressed;
-            InputSignals.Instance.OnDisableInput -= OnDisableInput;
+            PlayerSignals.Instance.OnHitPipe -= OnHitPipe;
+            CoreGameSignals.Instance.OnGameStart += OnGameStart;
+            CoreGameSignals.Instance.OnGameRestart += OnGameRestart;
         }
-        private void OnDisableInput()
+
+        private void OnHitPipe()
         {
             canMove = false;
         }
+
+        private void OnGameRestart()
+        {
+            rb.useGravity = false;
+        }
+
+        private void OnGameStart()
+        {
+            rb.useGravity = true;
+        }
+        
         private void OnButtonPressed()
         {
             _movementController.Jump();
