@@ -32,6 +32,7 @@ namespace GameFolders.Scripts.Runtime.Managers
             InputSignals.Instance.OnButtonPressed += OnButtonPressed;
             InputSignals.Instance.OnDisableInput += OnDisableInput;
         }
+
         private void OnDisable()
         {
             InputSignals.Instance.OnButtonPressed -= OnButtonPressed;

@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 1286167908745692849}
   - component: {fileID: 213011312237057017}
   - component: {fileID: 4097217147071292267}
-  - component: {fileID: 1954359245079368317}
   - component: {fileID: 7152432851931663014}
   m_Layer: 3
   m_Name: Player
@@ -197,29 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c8cf431cee45378f122b2c7bacf411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &1954359245079368317
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317601740105265303}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.0706719
-  m_Height: 2.4585795
-  m_Direction: 2
-  m_Center: {x: 0, y: 0.01585257, z: -0.07389951}
 --- !u!114 &7152432851931663014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wingRotateAngle: {x: 30, y: 0, z: 0}
   wings: {fileID: 8610445062433113518}
-  jumpForce: 20
+  jumpForce: 28
 --- !u!1 &1583817844980828498
 GameObject:
   m_ObjectHideFlags: 0

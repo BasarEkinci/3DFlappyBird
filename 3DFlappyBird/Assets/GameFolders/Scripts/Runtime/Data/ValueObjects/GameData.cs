@@ -6,7 +6,7 @@ namespace GameFolders.Scripts.Runtime.Data.ValueObjects
     public struct GameData
     {
         public int GameSpeed;
-        public int Score;
-        public int HighScore;
+        internal int Score;
+        internal int HighScore;
     }
 }
