@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4678253791620130863}
   - component: {fileID: 1835834936760836298}
-  - component: {fileID: 2338750869402354031}
+  - component: {fileID: 486040097658552111}
   m_Layer: 0
   m_Name: pipe
   m_TagString: Point
@@ -138,7 +138,7 @@ Transform:
   - {fileID: 8474030516487723789}
   - {fileID: 2684811223549847546}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1835834936760836298
 BoxCollider:
@@ -161,7 +161,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 10, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2338750869402354031
+--- !u!114 &486040097658552111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,10 +170,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4961043574073941597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd002a4beb047faa4d96096e52e3e9d, type: 3}
+  m_Script: {fileID: 11500000, guid: cb416962bc57456f8cf1c788e38f2fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  obstacle: {fileID: 11400000, guid: f46ca4674240c4904abfc641383ed52c, type: 2}
 --- !u!1 &6195119388167370764
 GameObject:
   m_ObjectHideFlags: 0
