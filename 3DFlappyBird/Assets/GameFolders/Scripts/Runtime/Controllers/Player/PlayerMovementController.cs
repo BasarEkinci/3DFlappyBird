@@ -4,27 +4,15 @@ using GameFolders.Scripts.Runtime.Signals;
 
 public class PlayerMovementController : MonoBehaviour
 {
-    private float jumpForce;
-    private Rigidbody playerRb;
-    private bool canMove;
-    private Transform pTransform;
-
-    public PlayerMovementController(Rigidbody playerRb,float jumpForce,bool canMove,Transform pTransform)
-    {
-        this.playerRb = playerRb;
-        this.jumpForce = jumpForce;
-        this.canMove = canMove;
-        this.pTransform = pTransform;
-    }
-    public void Jump()
+    public void Jump(float jumpForce,Rigidbody playerRb)
     {
         playerRb.velocity = Vector3.zero; 
-        playerRb.velocity += new Vector3(0, jumpForce, 0); 
+        playerRb.velocity += Vector3.up * jumpForce; 
     }
 
-    public void FlightEffect()
+    public void FlightEffect(Transform playerTransform)
     {
-        pTransform.DORotate(Vector3.left * 20, 0.1f).From().SetLoops(1, LoopType.Yoyo); 
+        playerTransform.DORotate(Vector3.left * 20, 0.6f).From().SetLoops(1, LoopType.Yoyo); 
     }
 
     private void Update()

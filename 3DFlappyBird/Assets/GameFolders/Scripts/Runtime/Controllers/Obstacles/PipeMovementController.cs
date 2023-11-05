@@ -1,22 +1,62 @@
+using System;
+using GameFolders.Scripts.Runtime.Signals;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace GameFolders.Scripts.Runtime.Controllers.Obstacles
 {
     public class PipeMovementController : MonoBehaviour
     {
-        internal void Move(float moveSpeed)
+        [SerializeField] private float moveSpeed;
+        [SerializeField] private float zBound;
+        [SerializeField] private float minPos;
+        [SerializeField] private float maxPos;
+
+        private bool _canMove = true;
+
+        private void OnEnable()
         {
-            Vector3 moveMultiplier = new Vector3(0, 0, moveSpeed);
+            CoreGameSignals.Instance.OnGameOver += OnGameOver;
+            CoreGameSignals.Instance.OnGameStart += OnGameStart;
+        }
+
+        private void OnDisable()
+        {
+            CoreGameSignals.Instance.OnGameOver -= OnGameOver;
+            CoreGameSignals.Instance.OnGameStart -= OnGameStart;
+        }
+
+        private void OnGameStart()
+        {
+            _canMove = true;
+        }
+
+        private void OnGameOver()
+        {
+            _canMove = false;
+        }
+
+        private void Move()
+        {
+            Vector3 moveMultiplier = Vector3.back * moveSpeed;
             transform.position += moveMultiplier * Time.deltaTime;
         }
 
-        internal void SetPosition(float yPos,float zBound)
+        private void SetPosition()
         {
             if (transform.position.z <= zBound)
             {
-                yPos = Random.Range(-8, 9);
+                float yPos = Random.Range(minPos, maxPos);
                 transform.position = new Vector3(-20, yPos, 25);
             }     
+        }
+
+        private void Update()
+        {
+            if(!_canMove) return;
+            
+            Move();
+            SetPosition();
         }
     }
 }

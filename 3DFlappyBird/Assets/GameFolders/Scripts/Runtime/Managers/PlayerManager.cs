@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using GameFolders.Scripts.Runtime.Signals;
 using UnityEngine;
@@ -12,14 +11,14 @@ namespace GameFolders.Scripts.Runtime.Managers
         [SerializeField] private GameObject wings;
         [SerializeField] private float jumpForce;
         
-        private Rigidbody rb;
+        private Rigidbody _rb;
         private PlayerMovementController _movementController;
-        private bool canMove = true;
+        private bool _canMove = true;
         
         private void Awake()
         {
-            rb = GetComponent<Rigidbody>();
-            _movementController = new PlayerMovementController(rb, jumpForce,canMove,transform);
+            _rb = GetComponent<Rigidbody>();
+            _movementController = GetComponent<PlayerMovementController>();
         }
 
         private void Start()
@@ -45,23 +44,25 @@ namespace GameFolders.Scripts.Runtime.Managers
 
         private void OnHitPipe()
         {
-            canMove = false;
+            _canMove = false;
         }
 
         private void OnGameRestart()
         {
-            rb.useGravity = false;
+            _rb.useGravity = false;
         }
 
         private void OnGameStart()
         {
-            rb.useGravity = true;
+            _rb.useGravity = true;
+            _canMove = true;
         }
         
         private void OnButtonPressed()
         {
-            _movementController.Jump();
-            _movementController.FlightEffect();
+            if(!_canMove) return;
+            _movementController.Jump(jumpForce,_rb);
+            _movementController.FlightEffect(transform);
         }
 
     }

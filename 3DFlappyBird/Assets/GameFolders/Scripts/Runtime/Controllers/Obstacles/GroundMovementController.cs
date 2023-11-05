@@ -1,20 +1,55 @@
+using GameFolders.Scripts.Runtime.Signals;
 using UnityEngine;
 
 namespace GameFolders.Scripts.Runtime.Controllers.Obstacles
 {
     public class GroundMovementController : MonoBehaviour
     {
-        internal void Move(float moveSpeed)
+        [SerializeField] private float moveSpeed;
+        [SerializeField] private float zBound;
+        [SerializeField] private float newZPos;
+
+        private bool _canMove = true;
+        
+        private void OnEnable()
         {
-            transform.position += new Vector3(0, 0, moveSpeed) * Time.deltaTime;
+            CoreGameSignals.Instance.OnGameOver += OnGameOver;
+            CoreGameSignals.Instance.OnGameStart += OnGameStart;
         }
 
-        internal void SetPosition(float zBound,float newZPos)
+        private void OnDisable()
+        {
+            CoreGameSignals.Instance.OnGameOver -= OnGameOver;
+            CoreGameSignals.Instance.OnGameStart -= OnGameStart;
+        }
+        private void OnGameStart()
+        {
+            _canMove = true;
+        }
+        private void OnGameOver()
+        {
+            _canMove = false;
+        }
+
+        private void Update()
+        {
+            if (!_canMove) return;
+            Move();
+            SetPosition();
+        }
+
+        private void Move()
+        {
+            transform.position += Vector3.back * (moveSpeed * Time.deltaTime);
+        }
+        private void SetPosition()
         {
             if (transform.position.z <= zBound)
             {
-                transform.position = new Vector3(0, 0, newZPos);
+                transform.position = Vector3.forward * newZPos;
             }
         }
+        
+        
     }
 }
