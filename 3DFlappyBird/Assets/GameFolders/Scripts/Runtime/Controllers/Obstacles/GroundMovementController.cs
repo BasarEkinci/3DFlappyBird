@@ -9,7 +9,7 @@ namespace GameFolders.Scripts.Runtime.Controllers.Obstacles
         [SerializeField] private float zBound;
         [SerializeField] private float newZPos;
 
-        private bool _canMove = true;
+        private bool _canMove;
         
         private void OnEnable()
         {

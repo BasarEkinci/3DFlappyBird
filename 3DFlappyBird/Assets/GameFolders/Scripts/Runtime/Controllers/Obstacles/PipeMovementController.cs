@@ -12,7 +12,7 @@ namespace GameFolders.Scripts.Runtime.Controllers.Obstacles
         [SerializeField] private float minPos;
         [SerializeField] private float maxPos;
 
-        private bool _canMove = true;
+        private bool _canMove;
 
         private void OnEnable()
         {

@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using GameFolders.Scripts.Runtime.Signals;
 using UnityEngine;
@@ -32,6 +33,14 @@ namespace GameFolders.Scripts.Runtime.Managers
             PlayerSignals.Instance.OnHitPipe += OnHitPipe;
             CoreGameSignals.Instance.OnGameStart += OnGameStart;
             CoreGameSignals.Instance.OnGameRestart += OnGameRestart;
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && _canMove)
+            {
+                _rb.useGravity = true;
+            }
         }
 
         private void OnDisable()
